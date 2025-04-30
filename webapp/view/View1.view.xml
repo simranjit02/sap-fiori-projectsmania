@@ -1,6 +1,10 @@
 <mvc:View controllerName="prjmania.projectmania.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+    <Shell id="shell">
+        <Page id="page" title="{i18n>title}">
+            <content>
+            </content>
+        </Page>
+    </Shell>
 </mvc:View>
