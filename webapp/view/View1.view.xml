@@ -1,10 +1,18 @@
 <mvc:View controllerName="prjmania.projectmania.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
     xmlns="sap.m">
     <Shell id="shell">
         <Page id="page" title="{i18n>title}">
-            <content>
-            </content>
+            <l:VerticalLayout >
+                <l:HorizontalLayout content="{tiles>/}" allowWrapping="true">
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" press="press" header="{tiles>title}" frameType="OneByHalf">
+                        <TileContent>
+                            <Text id="text" text="{tiles>description}" />
+                        </TileContent>
+                    </GenericTile>
+                </l:HorizontalLayout>
+            </l:VerticalLayout>
         </Page>
     </Shell>
 </mvc:View>
