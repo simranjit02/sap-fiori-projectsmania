@@ -1,5 +1,0 @@
-<mvc:View controllerName="prjmania.projectmania.controller.counter.counter"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Button text="click me"/>
-</mvc:View>

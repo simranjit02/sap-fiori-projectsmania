@@ -93,6 +93,7 @@
         },
         "counter": {
           "transition": "slide",
+          "path": "prjmania.projectmania.view.counter",
           "name": "counter",
           "viewType": "XML"
         }

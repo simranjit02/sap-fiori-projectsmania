@@ -3,5 +3,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
 
   return Controller.extend("prjmania.projectmania.controller.View1", {
     onInit() {},
+    onNavBack() {
+      window.history.go(-1);
+    },
   });
 });
