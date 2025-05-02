@@ -8,6 +8,10 @@ sap.ui.define(
         let tilesModel = new JSONModel("../model/tiles.json");
         this.getView().setModel(tilesModel, "tiles");
       },
+      onPress(oEvent) {
+        var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+        oRouter.navTo(oEvent);
+      },
     });
   }
 );

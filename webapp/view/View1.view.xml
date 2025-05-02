@@ -6,7 +6,7 @@
         <Page id="page" title="{i18n>title}">
             <l:VerticalLayout >
                 <l:HorizontalLayout content="{tiles>/}" allowWrapping="true">
-                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" press="press" header="{tiles>title}" frameType="OneByHalf">
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" press="onPress(${tiles>route})" header="{tiles>title}" frameType="OneByHalf">
                         <TileContent>
                             <Text id="text" text="{tiles>description}" />
                         </TileContent>

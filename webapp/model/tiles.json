@@ -1,27 +1,27 @@
 [
     {
-        "title": "Tile 1",
-        "description": "This is the first tile.",
-        "route": " /tile1"
+        "title": "Counter App",
+        "description": "This is a basic counter app.",
+        "route": "counter"
     },
     {
         "title": "Tile 2",
         "description": "This is the second tile.",
-        "route": " /tile2"
+        "route": "/tile2"
     },
     {
         "title": "Tile 3",
         "description": "This is the third tile.",
-        "route": " /tile3"
+        "route": "/tile3"
     },
     {
         "title": "Tile 4",
         "description": "This is the fourth tile.",
-        "route": " /tile4"
+        "route": "/tile4"
     },
     {
         "title": "Tile 5",
         "description": "This is the fifth tile.",
-        "route": " /tile5"
+        "route": "/tile5"
     }
 ]

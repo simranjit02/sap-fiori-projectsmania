@@ -76,13 +76,24 @@
         {
           "pattern": "",
           "name": "View1",
-          "target": "View1"
+          "target": "View1",
+          "controlId": "app"
+        },
+        {
+          "pattern": "counter",
+          "name": "counter",
+          "target": "counter"
         }
       ],
       "targets": {
         "View1": {
           "id": "View1",
           "name": "View1",
+          "viewType": "XML"
+        },
+        "counter": {
+          "transition": "slide",
+          "name": "counter",
           "viewType": "XML"
         }
       }
