@@ -2,7 +2,16 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
     <Page showNavButton="true" navButtonTooltip="go back" title="Counter App" navButtonPress="onNavBack" showHeader="true" showFooter="true">
-        <Button text="col" />
+        <VBox class="sapUiSmallMargin" alignItems="Center" justifyContent="Center">
+            <Text text="Counter App" class="sapUiTinyMarginBottom" />
+
+            <Text id="counterText" text="{currentCount>/count}" class="sapUiLargeMarginBottom sapUiLargeFontSize" />
+
+            <HBox>
+                <Button text="-" press="onDecrement" class="sapUiTinyMarginEnd"/>
+                <Button text="+" press="onIncrement" />
+            </HBox>
+        </VBox>
 
     </Page>
 </mvc:View>

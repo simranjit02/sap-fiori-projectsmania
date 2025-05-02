@@ -1,10 +1,9 @@
-sap.ui.define([
-  "sap/ui/core/mvc/Controller"
-], (BaseController) => {
+sap.ui.define(["sap/ui/core/mvc/Controller"], (BaseController) => {
   "use strict";
 
   return BaseController.extend("prjmania.projectmania.controller.App", {
-      onInit() {
-      }
+    onInit() {
+      sap.ui.getCore().applyTheme("sap_fiori_3_dark");
+    },
   });
 });
