@@ -5,7 +5,7 @@
         <VBox class="sapUiSmallMargin" alignItems="Center" justifyContent="Center">
             <Text text="Counter App" class="sapUiTinyMarginBottom" />
 
-            <Text id="counterText" text="{currentCount>/count}" class="sapUiLargeMarginBottom sapUiLargeFontSize" />
+            <Text id="counterTextt" text="{currentCount>/count}" class="sapUiLargeMarginBottom sapUiLargeFontSize" />
 
             <HBox>
                 <Button text="-" press="onDecrement" class="sapUiTinyMarginEnd"/>

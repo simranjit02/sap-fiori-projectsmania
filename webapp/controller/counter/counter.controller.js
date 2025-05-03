@@ -3,7 +3,7 @@ sap.ui.define(
   (Controller, JSONModel) => {
     "use strict";
 
-    return Controller.extend("prjmania.projectmania.controller.View1", {
+    return Controller.extend("prjmania.projectmania.controller.counter", {
       onInit() {
         var oModel = new JSONModel({
           count: 1,

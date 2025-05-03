@@ -51,6 +51,14 @@
         "settings": {
           "bundleName": "prjmania.projectmania.i18n.i18n"
         }
+      },
+      "EmployeeData": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "useBatch": false
+        },
+        "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/"
       }
     },
     "resources": {
@@ -83,6 +91,11 @@
           "pattern": "counter",
           "name": "counter",
           "target": "counter"
+        },
+        {
+          "pattern": "employee-app",
+          "name": "employee-app",
+          "target": "employee"
         }
       ],
       "targets": {
@@ -94,7 +107,12 @@
         "counter": {
           "transition": "slide",
           "path": "prjmania.projectmania.view.counter",
-          "name": "counter",
+          "name": "Counter",
+          "viewType": "XML"
+        },
+        "employee": {
+          "transition": "slide",
+          "name": "employee.EmployeeList",
           "viewType": "XML"
         }
       }
