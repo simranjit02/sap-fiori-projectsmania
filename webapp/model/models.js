@@ -16,6 +16,9 @@ sap.ui.define(
       createJSONModel: function () {
         var oEmployeeModel = new JSONModel();
         oEmployeeModel.loadData("model/employees.json");
+        oEmployeeModel.attachRequestCompleted(function () {
+          console.log("Employee data loaded successfully.");
+        });
         return oEmployeeModel;
       },
     };

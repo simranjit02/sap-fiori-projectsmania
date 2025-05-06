@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="prjmania.projectmania.controller.employee.EmployeeDetail">
+    <Page >
+        <Button text="sdfsdf" />
+    </Page>
+</mvc:View>

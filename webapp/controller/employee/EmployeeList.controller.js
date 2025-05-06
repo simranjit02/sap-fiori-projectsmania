@@ -1,21 +1,24 @@
 sap.ui.define(
-  [
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel",
-    "prjmania/projectmania/model/models",
-  ],
-  (Controller, JSONModel, Models) => {
+  ["sap/ui/core/mvc/Controller", "prjmania/projectmania/model/models"],
+  (Controller, Models) => {
     return Controller.extend(
       "prjmania.projectmania.controller.employee.EmployeeList",
       {
         onInit() {
-          //   var oEmployeeModel = new JSONModel("../../model/employees.json");
-
-          //   console.log("oEmployeeModel", oEmployeeModel);
-          //   sap.ui.getCore().setModel(oEmployeeModel, "employee");
           var oEmployeeModel = Models.createJSONModel();
-          console.log("oEmployeeModel", oEmployeeModel);
-          sap.ui.getCore().setModel(oEmployeeModel, "employee");
+          this.getView().setModel(oEmployeeModel, "employee");
+        },
+        onUpdateFinished: function (oEvent) {
+          console.log("List loaded with items:", oEvent.getParameter("total"));
+        },
+        empDetail: function (oEvent) {
+          var oItem = oEvent.getSource();
+          var oCtx = oItem.getBindingContext("employee");
+          var sEmployeeID = oCtx.getProperty("EmployeeID");
+          var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+          oRouter.navTo("employeeDetail", {
+            employeeId: sEmployeeID,
+          });
         },
       }
     );

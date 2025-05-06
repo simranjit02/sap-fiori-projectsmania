@@ -2,10 +2,13 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
     <Page title="Employee Data">
-        <List headerText="List of Employees" busy="true" items="{/employee}">
-            <StandardListItem title="{
-FirstName}" />
+        <List headerText="List of Employees" items="{employee>/}" includeItemInSelection="true" updateFinished="onUpdateFinished">
+            <!-- <infoToolbar>
+                <OverflowToolbar visible="false" id="idInfoToolbar">
+                    <Label id="idFilterLabel" />
+                </OverflowToolbar>
+            </infoToolbar> -->
+            <StandardListItem title="{employee>FirstName}" description="{employee>City}" type="Navigation" press="empDetail" navigated="true"/>
         </List>
     </Page>
-
 </mvc:View>

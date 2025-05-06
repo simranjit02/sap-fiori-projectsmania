@@ -95,7 +95,12 @@
         {
           "pattern": "employee-app",
           "name": "employee-app",
-          "target": "employee"
+          "target": "employeeList"
+        },
+        {
+          "pattern": "employeeDetail/{employeeId}",
+          "name": "employeeDetail",
+          "target": "employeeDetail"
         }
       ],
       "targets": {
@@ -110,9 +115,17 @@
           "name": "Counter",
           "viewType": "XML"
         },
-        "employee": {
+        "employeeList": {
           "transition": "slide",
+          "viewLevel": 1,
           "name": "employee.EmployeeList",
+          "viewType": "XML"
+        },
+        "employeeDetail": {
+          "transition": "slide",
+          "viewLevel": 2,
+          "path": "prjmania.projectmania.view.employee",
+          "name": "employeeDetail",
           "viewType": "XML"
         }
       }
