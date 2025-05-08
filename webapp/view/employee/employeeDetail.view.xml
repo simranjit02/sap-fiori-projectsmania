@@ -1,6 +1,22 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m" controllerName="prjmania.projectmania.controller.employee.EmployeeDetail">
-    <Page >
-        <Button text="sdfsdf" />
+    xmlns="sap.m" controllerName="prjmania.projectmania.controller.employee.EmployeeDetail"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page title="Employee Details" showNavButton="true" navButtonPress="onNavBack">
+
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <ObjectHeader title="{selectedEmployee>FirstName} {selectedEmployee>LastName}" number="{EmployeeID}" intro="{Title}" icon="sap-icon://employee" />
+
+                <Text text="Address:" class="sapUiTinyMarginTop"/>
+                <Text text="{Address}" />
+                <Text text="{City}, {Region} {PostalCode}" />
+                <Text text="{Country}" />
+
+                <Text text="Phone: {HomePhone}" class="sapUiTinyMarginTop"/>
+                <Text text="Extension: {Extension}" />
+            </VBox>
+        </content>
+
     </Page>
 </mvc:View>

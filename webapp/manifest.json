@@ -51,14 +51,6 @@
         "settings": {
           "bundleName": "prjmania.projectmania.i18n.i18n"
         }
-      },
-      "EmployeeData": {
-        "type": "sap.ui.model.odata.v2.ODataModel",
-        "settings": {
-          "defaultBindingMode": "TwoWay",
-          "useBatch": false
-        },
-        "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/"
       }
     },
     "resources": {

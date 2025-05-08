@@ -10,19 +10,36 @@ sap.ui.define(
             .getRoute("employeeDetail")
             .attachPatternMatched(this._onObjectMatched, this);
         },
+
         _onObjectMatched: function (oEvent) {
-          var sEmployeeId = oEvent.getParameter("arguments").employeeId;
-          console.log("Received employeeId:", sEmployeeId);
+          var sEmployeeId = parseInt(
+            oEvent.getParameter("arguments").employeeId
+          );
 
-          var sEmployeeModel = Models.createJSONModel();
-          console.log("sEmployeeModel", sEmployeeModel);
-          // Find the specific employee
-          var oEmployee = aData.find((emp) => emp.EmployeeID == sEmployeeId);
-          console.log("Employee object:", oEmployee);
+          // Load the model with employee data
+          var oEmployeeModel = Models.createJSONModel();
+          this.getView().setModel(oEmployeeModel, "semployee");
+          console.log("oEmployeeModel", oEmployeeModel);
 
-          // (Optional) Set that employee data to a local model or bind it to view
-          var oDetailModel = new sap.ui.model.json.JSONModel(oEmployee);
-          this.getView().setModel(oDetailModel, "selectedEmployee");
+          // Ensure data is loaded before processing
+          var oModel = this.getView().getModel("semployee");
+          var oData = oModel.getData();
+          console.log("Full Model oModel:", oModel);
+          var aEmployees = oData && oData.employees ? oData.employees : [];
+
+          console.log("Loaded Employees:", aEmployees);
+
+          var oEmployee = aEmployees.find(function (emp) {
+            return emp.EmployeeID === sEmployeeId;
+          });
+
+          if (oEmployee) {
+            var oDetailModel = new sap.ui.model.json.JSONModel(oEmployee);
+            this.getView().setModel(oDetailModel, "selectedEmployee");
+            console.log("Employee found:", oEmployee);
+          } else {
+            console.error("Employee not found for ID:", sEmployeeId);
+          }
         },
       }
     );
